@@ -6,6 +6,7 @@ class PostgresCategoriesRepositoy implements ICategoriesRepository {
   findByName(name: string): Category {
     console.log(name);
     throw new Error('Method not implemented.');
+
   }
   list(): Category[] {
     throw new Error('Method not implemented.');
