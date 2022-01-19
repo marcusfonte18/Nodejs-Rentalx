@@ -32,6 +32,7 @@ class CategoriesRepository implements ICategoriesRepository {
   findByName(name: string) {
 
     const category = this.categories.find(category => category.name === name)
+
     return category;
 
   }
