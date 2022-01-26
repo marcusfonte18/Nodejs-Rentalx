@@ -1,4 +1,4 @@
-import { Category } from '../model/Category';
+import { Category } from '../entities/Category';
 
 //DTO => Data transfer Object
 //I de interface - O que está interface faz e DTO
