@@ -1,19 +1,20 @@
+import { AppError } from '../../../error/AppError';
 import { Category } from '../entities/Category';
 import { ICategoriesRepository, ICreateCategoryDTO } from './ICategoriesRepository';
 
 class PostgresCategoriesRepositoy implements ICategoriesRepository {
 
-  findByName(name: string): Category {
+  findByName(name: string): Promise<Category> {
     console.log(name);
-    throw new Error('Method not implemented.');
+    throw new AppError('Method not implemented.');
 
   }
-  list(): Category[] {
-    throw new Error('Method not implemented.');
+  list(): Promise<Category[]> {
+    throw new AppError('Method not implemented.');
   }
-  create({ name, description }: ICreateCategoryDTO): void {
+  create({ name, description }: ICreateCategoryDTO): Promise<void> {
     console.log(name, description);
-    throw new Error('Method not implemented.');
+    throw new AppError('Method not implemented.');
   }
 
 }
