@@ -1,5 +1,5 @@
-import { AppError } from '../../../error/AppError';
-import { Category } from '../entities/Category';
+import { AppError } from '@shared/errors/AppError';
+import { Category } from '../infra/typeorm/entities/Category';
 import { ICategoriesRepository, ICreateCategoryDTO } from './ICategoriesRepository';
 
 class PostgresCategoriesRepositoy implements ICategoriesRepository {
