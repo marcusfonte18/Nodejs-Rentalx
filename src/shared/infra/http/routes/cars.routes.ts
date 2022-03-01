@@ -5,6 +5,6 @@ const carsRoutes = Router();
 
 const createCarController = new CreateCarController();
 
-carsRoutes.post("/");
+carsRoutes.post("/", createCarController.handle);
 
 export { carsRoutes }
