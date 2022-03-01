@@ -1,7 +1,8 @@
-import { Category } from '../entities/Category';
 
 //DTO => Data transfer Object
 //I de interface - O que está interface faz e DTO
+
+import { Category } from '../infra/typeorm/entities/Category';
 
 interface ICreateCategoryDTO {
   name: string,

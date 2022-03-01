@@ -2,7 +2,6 @@
 
 **RF** -> Regra Funcional
   - Deve ser possível cadastrar um novo carro;
-  - Deve ser possível listar todos as categorias; 
 
 **RN** -> Regra de Negócio 
   - Não deve ser possível cadastrar um novo carro com uma placa já existente;
