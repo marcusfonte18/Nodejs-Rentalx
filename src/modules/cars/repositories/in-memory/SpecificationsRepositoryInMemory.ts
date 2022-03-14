@@ -3,28 +3,31 @@ import { ICreateSpecificationDTO, ISpecificationsRepository } from '../ISpecific
 
 class SpecificationsRepositoryInMemory implements ISpecificationsRepository {
 
- specifications: Specification[] = [];
+  specifications: Specification[] = [];
 
- async create({ name, description }: ICreateSpecificationDTO): Promise<void> {
-  const specification = new Specification();
+  async create({ name, description }: ICreateSpecificationDTO): Promise<Specification> {
+    const specification = new Specification();
 
-  Object.assign(specification, {
-   description,
-   name,
-  });
+    Object.assign(specification, {
+      description,
+      name,
+    });
 
-  this.specifications.push(specification);
- }
- async findByName(name: string): Promise<Specification> {
-  return this.specifications.find(specification => specification.name === name);
- }
+    this.specifications.push(specification);
 
- async findByIds(ids: string[]): Promise<Specification[]> {
-  const allSpecifications = await this.specifications.filter(specification => ids.includes(specification.id));
+    return specification;
+  }
 
-  return allSpecifications;
+  async findByName(name: string): Promise<Specification> {
+    return this.specifications.find(specification => specification.name === name);
+  }
 
- }
+  async findByIds(ids: string[]): Promise<Specification[]> {
+    const allSpecifications = await this.specifications.filter(specification => ids.includes(specification.id));
+
+    return allSpecifications;
+
+  }
 
 
 }
